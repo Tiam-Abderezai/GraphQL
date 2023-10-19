@@ -1,2 +1,2 @@
 # GraphQL
-init commit
+App demonstrates use of GraphQL via Kotlin-Appollo
