@@ -1,2 +1,2 @@
 # GraphQL
-App demonstrates use of GraphQL via Kotlin-Appollo
+App demonstrates use of GraphQL via Kotlin-Apollo
