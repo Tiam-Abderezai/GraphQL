@@ -1,8 +1,16 @@
+val apolloVersion = "4.0.0-beta.1"
+val koinVersion = "3.5.0"
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.apollographql.apollo3") version "4.0.0-beta.1"
 }
 
+apollo {
+    service("service") {
+        packageName.set("com.example.graphql")
+    }
+}
 android {
     namespace = "com.example.graphql"
     compileSdk = 34
@@ -25,7 +33,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -66,4 +74,8 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    // Koin
+    implementation("io.insert-koin:koin-android:$koinVersion")
+    // Apollo
+    implementation("com.apollographql.apollo3:apollo-runtime:$apolloVersion")
 }
