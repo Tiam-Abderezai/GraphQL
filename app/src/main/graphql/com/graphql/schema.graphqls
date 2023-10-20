@@ -1,0 +1,20 @@
+type Query {
+   search(query: String!, type: RepositoryType!, first: Int!): SearchResult
+}
+
+enum RepositoryType {
+   REPOSITORY
+}
+
+type SearchResult {
+   edges: [RepositoryEdge]
+}
+
+type RepositoryEdge {
+   node: Repository
+}
+
+type Repository {
+   name: String
+   stargazerCount: Int
+}

@@ -1,0 +1,12 @@
+query QueryRepositories {
+    search(query: "android", type: REPOSITORY, first: 50) {
+        edges {
+            node {
+                ... on Repository {
+                    name
+                    stargazerCount
+                }
+            }
+        }
+    }
+}
