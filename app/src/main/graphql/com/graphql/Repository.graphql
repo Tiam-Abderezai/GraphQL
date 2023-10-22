@@ -1,5 +1,5 @@
-query QueryRepositories {
-    search(query: "android", type: REPOSITORY, first: 50) {
+query Repositories {
+    search(query: "topic:android", type: REPOSITORY, first: 50) {
         edges {
             node {
                 ... on Repository {
