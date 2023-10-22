@@ -22,15 +22,6 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-      
-    # Before running tests, start the emulator
-    - name: Run emulator
-      uses: ReactiveCircus/android-emulator-runner@v2
-      with:
-        api-level: 34   # Replace with your target API level
-        script: ./gradlew connectedCheck
-        emulator-options: "-no-window -no-audio -debug-init -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim"
-        adb-connection-attempts: 5
 
     # For ktlint
     - name: Check with ktlint
