@@ -4,5 +4,6 @@ import com.example.graphql.repositories.domain.RepositoryDto
 
 data class RepositoriesViewState(
     val repositories: List<RepositoryDto?>? = emptyList<RepositoryDto>(),
-    val isLoading: Boolean = false
+    val isLoading: Boolean = false,
+    val isError: Boolean = false
 )
