@@ -22,18 +22,8 @@ class RepositoriesViewModel @Inject constructor(
             _state.update { it.copy(isLoading = true) }
             _state.update {
                 it.copy(
-                    repositories = getRepositoriesUseCase?.invoke(),
+                    repositories = getRepositoriesUseCase.invoke(),
                     isLoading = true,
-                )
-            }
-        }
-    }
-
-    fun getRepositories(code: String) {
-        viewModelScope.launch {
-            _state.update {
-                it.copy(
-                    repositories = getRepositoriesUseCase?.invoke(),
                 )
             }
         }
