@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GraphQL</string>
+    <string name="repository_star">repository_star</string>
 </resources>
