@@ -29,6 +29,8 @@ jobs:
       with:
         api-level: 34   # Replace with your target API level
         script: ./gradlew connectedCheck
+        emulator-options: "-no-window -no-audio -debug-init -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim"
+        adb-connection-attempts: 5
 
     # For ktlint
     - name: Check with ktlint
